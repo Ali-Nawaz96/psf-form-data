@@ -1,0 +1,247 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="banner ">
+    <div class="para">
+        <img src="{% static 'images/Group 8066.png' %}">
+    </div>
+    </section>
+    <section class="second container">
+        <!-- <div class="about-psf-border-1"></div> -->
+            <p class="attitude text-light">If you have the attitude to take on extreme challenges today, you deserve to be part of a promising future tomorrow: a future that will make you financially independent and a successful entrepreneur. </p>
+            <!-- <div class="about-psf-border"></div> -->
+    </section>
+    <section class="third container position-relative">
+        <div class="row">
+        <div class="col-md-7 ">
+            <p class="invest">Invest your time and energy for a guarantied success roadmap, a doorway for venturing into a world of endless possibilities. To become an aspiring entrepreneur, enhance your vision, and be financialliy independent.</p>
+        </div>
+        <div class="col-md-5">
+            <img src="{% static 'images/Group 8068.png' %}">
+        </div>
+        </div>
+    </section>
+    <section class="fourth container mt-5">
+        <div class="row">
+        <div class="col-md-5">
+            <img src="{% static 'images/Group 8069.png'%}">
+        </div>
+        <div class="col-md-7">
+<p class="based">Through USA’S work-based scholarship convention, you will get an opportunity of a lifetime. Increase productivity with a clear vision and a continual learning curve by working alongside members of Alumni and Corporate partners.</p>
+        </div>
+        </div>
+    </section>
+    <section class="fifth container-md mt-5">
+        <div class="container">
+            <h1 class="text-center text-warning">Eligibility Criteria</h1>
+            <p class="student text-center fw-bold">Student of USA</p>
+            <p class="student text-center fw-bold">Right Attitude & Aptitude</p>
+            <p class="student text-center fw-bold">Perseverance</p>
+            <p class="student text-center fw-bold">Determination</p>
+        </div>
+    </section>
+    <section class="role container-md text-center position-relative">
+        
+        <div class="role-content">
+            <h2 class="fw-bold">Fill the form for more Information</h2>
+            <p>To learn more about the Role of Business Associates, Structure of PSF and its Allied Projects, kindly
+                fill the following application form.</p>
+        </div>
+        <div class="role-content-back"></div>
+        </div>
+    </section>
+    <section class="form-1 px-0 container-md">
+        <div class="form px-md-3">
+            <h1>Application for 
+                Business Associates</h1>
+            <hr>
+            <form action="{% url 'form_submit' %}" method="POST" enctype="multipart/form-data" class="form-bg">
+                {% csrf_token %}
+                <div class="personal-information mb-3">
+                    <h1>Personal Information</h1>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="first-name" class="form-label">First Name</label>
+                                <input
+                                    onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)|| (event.charCode > 31 && event.charCode < 33)"
+                                    maxlength="30" type="text" class="form-control" name="first_name" id="first-name"
+                                    aria-describedby="emailHelp" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="last-name" class="form-label">Last Name</label>
+                                <input type="text"
+                                    onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)|| (event.charCode > 31 && event.charCode < 33)"
+                                    name="last_name" class="form-control" id="last-name" aria-describedby="emailHelp"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="city" class="form-label">Gender</label>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="flexRadioDefault1" value="Male" checked>
+                                        <label class="form-check-label" for="gender">
+                                            Male
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender"
+                                            id="flexRadioDefault1" value="Female">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="date-of-birth" class="form-label">Date of Birth</label>
+                                <input type="date" class="form-control" aria-label="date-of-birth" name="dob">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" name="address" class="form-control" id="address"
+                                    aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="whatsapp" class="form-label">WhatsApp No.</label>
+                                <input type="tel"
+                                    onkeypress="return (event.charCode > 47 && event.charCode < 58) || (event.charCode > 31 && event.charCode < 33)"
+                                    maxlength="13" minlength="11" pattern="[0-9]{11}" name="whatsapp" class="form-control"
+                                    id="whatsapp" aria-describedby="emailHelp" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="mobile" class="form-label">Mobile.</label>
+                                <input type="tel"
+                                    onkeypress="return (event.charCode > 47 && event.charCode < 58) || (event.charCode > 31 && event.charCode < 33)"
+                                    maxlength="12" minlength="11" pattern="[0-9]{11}" name="mobile_no"
+                                    class="form-control" id="mobile" aria-describedby="emailHelp" required>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email ID</label>
+                                <input type="email" name="email" class="form-control" id="email"
+                                    aria-describedby="emailHelp" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="CNIC" class="form-label">CNIC</label>
+                                <input
+                                    onkeypress="return (event.charCode > 47 && event.charCode < 58) || (event.charCode > 31 && event.charCode < 33)"
+                                    type="tel" maxlength="18" class="form-control" name="cnic">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="professional-information mb-3">
+                    <h1>Professional Information</h1>
+                    <div class="row">
+                        <div class="col">
+                            <label for="city" class="form-label">Profession</label>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="profession"
+                                            id="flexRadioDefault3" value="Job" checked>
+                                        <label class="form-check-label" for="flexRadioDefault3" >
+                                            Job
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Business" name="profession" id="Business"
+                                            >
+                                        <label class="form-check-label" for="flexRadioDefault4">
+                                            Business
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="business-name" class="form-label">Name of Organization</label>
+                                <input type="text"
+                                    onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)|| (event.charCode > 31 && event.charCode < 33)"
+                                    maxlength="30" name="organization" class="form-control" id="business-name"
+                                    aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3 ">
+                                <label for="Social-media " class="form-label ">Designation</label>
+                                <input type="text "
+                                    onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)|| (event.charCode > 31 && event.charCode < 33)"
+                                    maxlength="30" name="designation" class="form-control " id="Social-media "
+                                    aria-describedby="emailHelp ">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3 ">
+                                <label for="annual_income" class="form-label ">Monthly Income (PKR)</label>
+                                <input type="text" name="monthly_income" class="form-control " id="annual_income"
+                                    aria-describedby="emailHelp ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3 ">
+                                <label for="Working since" class="form-label ">Working since</label>
+                                <input type="date" name="working_since" class="form-control " id="Working since "
+                                    aria-describedby="emailHelp ">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3 ">
+                                <label for="Qualification" class="form-label ">Qualification</label>
+                                <select class="form-select" aria-label="Default select example" name="qualification">
+                                    <option selected>Matric</option>
+                                    <option value="1">Inter</option>
+                                    <option value="2">Bachelor</option>
+                                    <option value="3">Master</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <input type="hidden" name="form_name" value="business_associate">
+                <div class="d-flex justify-content-center ">
+                    <a href="/psf-digital">
+                        <input type="submit" class="text-center submit-btn" value="Submit"></a>
+                </div>
+    
+            </form>
+        </div>
+        </section>
+{% endblock %}
